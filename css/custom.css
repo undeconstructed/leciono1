@@ -1,0 +1,48 @@
+
+body {
+  background-color: rgb(0, 153, 0);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 400%;
+  margin: 1em 0;
+}
+
+.p, .ekz {
+  border: 1px solid rgb(0, 60, 0);
+  border-radius: 1em 0;
+  padding: 1.5em;
+}
+
+.p {
+  max-width: 50em;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+.p table td {
+  padding: .5em;
+}
+
+.ekz {
+  max-width: 40em;
+  margin: auto;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #ddd;
+}
+
+.ekz p {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+.ekz p.eo {
+  color: rgb(0, 153, 0);
+}
+.ekz p.tr {
+  color: blue;
+}
