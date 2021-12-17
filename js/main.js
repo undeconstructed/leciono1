@@ -8,7 +8,7 @@ function main() {
     e.addEventListener('click', _e => {
       eAudio.play()
     })
-    e.append('🔉')
+    e.append('🔉\ufe0e')
   }
 
   for (let e of document.querySelectorAll('.listen')) {
