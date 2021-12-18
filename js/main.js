@@ -8,6 +8,12 @@ function main() {
     e.addEventListener('click', _e => {
       eAudio.play()
     })
+    eAudio.addEventListener('play', _e => {
+      e.classList.add('playing')
+    })
+    eAudio.addEventListener('ended', _e => {
+      e.classList.remove('playing')
+    })
     e.append('🔉\ufe0e')
   }
 

@@ -1,11 +1,15 @@
 
+:root {
+  --egreen: rgb(0, 153, 0);
+}
+
 body {
   padding: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,153,0,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, var(--egreen) 100%);
 }
 
 .box {
-  background: linear-gradient(90deg, rgba(255,255,255,0) 40%, rgba(0,153,0,1) 40%, rgba(0,153,0,1) 60%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 40%, var(--egreen) 40%, var(--egreen) 60%, rgba(255,255,255,0) 60%);
   max-width: 50rem;
   margin: 0 auto;
   padding: 0;
@@ -15,14 +19,13 @@ h1 {
   text-align: center;
   color: white;
   font-size: 400%;
-  text-shadow: rgb(0, 153, 0) 1px 0 10px;
-  background-color: rgb(0, 153, 0);
+  background-color: var(--egreen);
   padding: 3rem 1rem;
   margin: 1rem 0;
 }
 
 .end {
-  background-color: rgb(0, 153, 0);
+  background-color: var(--egreen);
   color: white;
   padding: 3rem 1rem;
   margin: 1rem 0 !important;
@@ -36,8 +39,7 @@ h1 {
 }
 
 .p, .ekz {
-  border: 1px solid rgb(0, 153, 0);
-  /* border-radius: 1rem 0; */
+  border: 1px solid var(--egreen);
   padding: 1.5rem;
 }
 
@@ -59,12 +61,11 @@ h1 {
 
 .ekz {
   max-width: 50rem;
-  border-left: 2rem solid rgb(0, 153, 0);
+  border-left: 2rem solid var(--egreen);
   margin: auto;
   padding: 1.5rem;
   margin-bottom: 1rem;
   background-color: #eee;
-  /* border-radius: 0 1rem 0 0; */
   font-size: larger;
 }
 
@@ -75,7 +76,7 @@ h1 {
 }
 .ekz p.eo {
   font-weight: bold;
-  color: rgb(0, 153, 0);
+  color: var(--egreen);
 }
 .ekz p.tr {
   color: blue;
@@ -87,6 +88,15 @@ h1 {
   font-size: 200%;
   padding-right: 1rem;
   cursor: pointer;
+  transition: text-shadow .5s, color .5s;
+}
+.listen:hover {
+  text-shadow: var(--egreen) 0 0 2rem;
+  color: var(--egreen);
+}
+.listen.playing {
+  color: white;
+  text-shadow: var(--egreen) 0 0 2rem;
 }
 
 .ekz {
