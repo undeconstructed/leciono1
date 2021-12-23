@@ -136,3 +136,13 @@ p.oe, p.tr {
   width: 1rem;
   height: 1rem;
 }
+
+@media (max-width:60rem) {
+  .languagechooser {
+    position: fixed;
+    top: auto; bottom: 1em;
+  }
+  .languagechooser select {
+    font-size: 150%;
+  }
+}
