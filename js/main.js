@@ -55,7 +55,7 @@ const translations = {
     "e16": "kio estas tio? tio estas kato.",
     "23": "Ho, jes, ankaŭ tiuj <em>ki-</em> vortoj estas bonaj por demandoj. Pensu ke ili signifas \"metu la taŭgan aferon ĉi tien, mi petas\". Ankaŭ ekzistas simplan rimedon por starigi jes/ne demandon:",
     "e17": "ĉu vi komprenas? jes .. kaj ne.",
-    "24": "Bone. Estas nur unu plian aferon por diskuti. No komencos facile, kaj tiam iĝu freneza kun ĝi. Se oni volas priskribi ion dufoje, ekzemple per speco kaj per nomo, simple metu ilin ambaŭ kune:",
+    "24": "Bone. Estas nur unu plua afero por diskuti. Ni komencos facile, kaj poste iĝu freneza kun ĝi. Se oni volas priskribi ion dufoje, ekzemple per speco kaj per nomo, simple metu ilin ambaŭ kune:",
     "e18": "mia amiko Tomaso estas tie.",
     "25": "Sed, kion fari se oni ne povas trovi vorton por io? Nu, oni devus uzi frazon. Pensu, ke la frazo prenas la lokon de nomo: ĝi estas sufiĉe da informo por komuniki ideon, sed per pluraj vortoj. Ni provu:",
     "e19": "mi ŝatas la ideon ke katoj povu flugi.",
