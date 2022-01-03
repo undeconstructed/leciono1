@@ -125,6 +125,8 @@ function translate(lang) {
     e.innerHTML = text[id] || baseText[id]
   }
 
+  document.title = text['title'] || baseText['title']
+
   document.querySelector('.languagechooser select').value = lang
 }
 
