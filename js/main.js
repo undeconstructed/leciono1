@@ -104,7 +104,7 @@ const translations = {
     "title": "Espéranto en 17 minuits"
   },
   "de": {
-    "title": "Esperanto in 17 minuten"
+    "title": "Esperanto in 17 Minuten"
   },
   "es": {
     "title": "Esperanto en 17 minutos"
