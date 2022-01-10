@@ -1,4 +1,4 @@
-* Esperanto en 17 minutoj
+# Esperanto en 17 minutoj
 
 Unupaĝa retejo por enduki la plej gravajn gramatikaĵojn de Esperanto. Ĝi celas
 prezenti tiujn ideojn tute laŭ signifo, t.e. ne laŭ la gramatikaj funkcioj.
