@@ -15,7 +15,7 @@ const translations = {
     "verb-u": "iu volas, ke ĝi okazu",
     "06": "Kelkfoje, oni volas diri kiu aŭ kio faras la verbon. Tio estas tre facila - prenu la radiko de tiu afero, kaj substantivigu ĝin per la <em>-o</em> finaĵo.",
     "e02": "kato kuris",
-    "07": "Se oni volas uzi alian koncepton por priskribi substantivon, prenu la radikon por tiu koncepto, kaj aldonu <em>-a</em> por fari ĝin adverbo:",
+    "07": "Se oni volas uzi alian koncepton por priskribi substantivon, prenu la radikon por tiu koncepto, kaj aldonu <em>-a</em> por fari ĝin adjektvo:",
     "e03": "blua kato dormos.",
     "08": "Eble estas alia koncepto kiu iel rilatas al ĉi tiu ago. Eble estas loko, en kiu ĝi okazas. Por aldoni alian substantivon, oni povas enkonduki ĝin per prepozicion, por diri kiel ĝi rilatas al la ago.",
     "e04": "blua kato sidas antaŭ televidilo (ilo-por-televidi).",
@@ -192,7 +192,7 @@ function main() {
     en[id] = e.innerHTML
     translations['en'] = en
   }
-  console.log(JSON.stringify(en, '', '  '))
+  // console.log(JSON.stringify(en, '', '  '))
 
   setupLanguageChooser()
 
