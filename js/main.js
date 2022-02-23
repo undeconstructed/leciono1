@@ -1,5 +1,8 @@
 
 const translations = {
+  "de": {
+    "title": "Esperanto in 17 Minuten"
+  },
   "eo": {
     "title": "Esperanto en 17 minutoj",
     "01": "(Ĉi tio ne estas Esperanto-kurso, sed ĝi donu al vi ideon pri kio la lingvo estas, kaj vi verŝajne povus lerni la plimulton de tio kion vi bezonas per ĉi tio, kaj per iom da legado.)",
@@ -92,22 +95,110 @@ const translations = {
     "e28": "nun, la kato bojas kiel hundo. aŭ eble tio estas la hundo.",
     "e29": "la lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
     "34": "Jes. Tio sufiĉos.",
-    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://learn.esperanto.com/\">Esperanto en 12 tagoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
+    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://learn.esperanto.com/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
   },
-  "se": {
-    "title": "Esperanto på 17 minuter"
-  },
-  "pl": {
-    "title": "Esperanto w 17 minut"
+  "es": {
+    "title": "Esperanto en 17 minutos",
+    "01": "(Esto no es un verdadero curso de Esperanto, pero te dará la idea de como es este idioma, y, probablemente, podrás aprender la mayoria de lo que necesitas mediante este exto y algo de lectura.)",
+    "02": "El esperanto tiene un conjunto de raices y un sistema que permite unirlas para crear otras más grandes. Comencemos.",
+    "03": "Mira por la ventana. Probablemente llueve. La raíz para esto es <em>pluv-</em>.",
+    "04": "La lluvia es algo sobre lo que se puede hablar. Para decir que llueve, usa la raíz \"pluv-\" y tranformala en un verbo añadiendo un sufijo que significa \"ocurre ahora\": <em>-as</em>.",
+    "e01": "pluvas.",
+    "05": "Esto es una frase. Se construye una frase alrededor de un verbo - Ese verbo tiene la capacidad de hacer una frase y un sufijo que indica que el asunto está ocurriendo. Hay cinco sufijos:",
+    "verb-is": "ocurrió en el pasado",
+    "verb-as": "ocurre ahora",
+    "verb-os": "ocurrirá en el futuro",
+    "verb-us": "ocurre hipotéticamente",
+    "verb-u": "alguien quiere que ocurra",
+    "06": "Algunas veces se quiere decir quíen hace la acción del verbo (sujeto). Es muy fácil - coje la raíz y transformala en sustantivo añadiendo el final<em>-o</em>.",
+    "e02": "kato kuris",
+    "07": "Si se quiere usar otro concepto para describir el sustantivo, toma la raíz y añadela el final <em>-a</em> para transformarlo en adjetivo:",
+    "e03": "blua kato dormos.",
+    "08": "Para añadir un sustantivo que indique el lugar, se puede introducir con una preposición que indica cómo se relaciona con la acción.",
+    "e04": "blua kato sidas antaŭ televidilo (ilo-por-televidi).",
+    "09": "Algunas veces no es evidente usar una preposición o no la quieres usar. En ese caso puedes marcar el sustantivo (y sus adjetivos si los tuviera) mediante el final<em>-n</em> final para decir\"tú sabes sobre qué va esto\".",
+    "e05": "kateto ne ŝatas pluvegon.",
+    "10": "Esto permite cambiar el orden de las palabras en la frase:",
+    "e06": "pluvon malvarman (malo-de-varma) kato malamas (malo-de-amas).",
+    "11": "Pero no hagas esto demasiado. Úsalo solo cuando facilite la comprensión de la frase.",
+    "12": "Sólo hay otro tipo de palabre que aprender: los adverbios. Yo no sé perfectamente qué es un daverbio, pero finaliza con la letra <em>-e</em> y se usa para describir algo que no es un sustantivo. Son muy flexibles (¡Quizá peligrosos!), comienza poniéndolo delante de la palabra que describe y rápidamente comprenderás la idea:",
+    "e07": "la subite malseka (malo-de-seka) kato rapide enkuras (en-kuras).",
+    "13": "A veces se debe de ser más preciso que decir solo \"kato\" - se debe defirnir a qué gato se refiere. La solución más fácil es usar el artículo <em>la</em>, que básicamente significa \"tú sabes cual.\"",
+    "e08": "la kato manĝas manĝaĵojn (aĵon-por-manĝi).",
+    "14": "O posiblemente se quiere decir \"ese sobre el que hablamos\":",
+    "e09": "tiu kato ĉasus hundojn.",
+    "15": "Si se quieren relacionar frases se necesitan palabras para hacerlo. Siempre hay una frase principal pero las frases relacionadas (subordinadas) necesitan algo para unirla, por ejemplo:",
+    "e10": "tiu kato ĉasus hundojn, se ĝi trovus hundojn.",
+    "e11": "tiu kato malŝatas hundojn, ĉar ili estas bruaj.",
+    "16": "Mientras tanto, veamos los pronombres:",
+    "mi": "la ulo kiu parolas",
+    "ni": "la parolanto kaj ties kunuloj",
+    "vi": "al kiu, tiu ulo parolas",
+    "gxi": "alia aĵo",
+    "li": "alia iĉa ulo",
+    "sxi": "alia ina ulo",
+    "ili": "plruaj aliaj aĵoj aŭ uloj",
+    "oni": "simple, iu",
+    "17": "\"Pero\", tu preguntas, \"¿qué hay sobre la neutralidad de genero?\". Volveremos sobre ese tema después.",
+    "18": "Bien, ahora viene una parte difíl. ¿EStás preparado?Okej, nun venas malfacila parto. A veces hay que unir frases de una manera especial en la que uno coge una idea de una frase y la introduce en otra. Para eso usamos la palabra<em>kiu</em>, que es como <em>tiu</em>, pero especial para citar la idea en otra frase:",
+    "e12": "la kato, kiu ĉasas hundojn, estas feliĉa.",
+    "19": "¿Está suficientemente claro que \"kiu\" se refiere al gato? S´i, pero podemos ser más claros:",
+    "e13": "la kato, kiu kato estas granda, estas dormema (ema-al-dormo).",
+    "20": "De hecho, se puede cogwer cualquier idea de la frase principal para meterla en la subordinada. Solo debemos decir de qué cosa es:",
+    "e14": "mi faris tion je la oka horo, je kiu tempo mi ridis.",
+    "21": "De hecho, existen algunas ayudas que puedes usar en estos casos:",
+    "e15": "mi estas kontenta, kiam mi estas kun vi.",
+    "22": "Hablaremos sobre todas estas palabras después, pero por ahora una más: Aveces uno quiera hablas sobre...algo. No está claro que es eso solo que es algo. Intentamos esto:",
+    "e16": "kio estas tio? tio estas kato.",
+    "23": "Oh, sí ambién esas <em>ki-</em> palabras son buenas para hacer preguntas. Piensa qué significa\"metu la taŭgan aferon ĉi tien, mi petas\". También existe un recurso simple para hacer preguntas que se responden con sí/no:",
+    "e17": "ĉu vi komprenas? jes .. kaj ne.",
+    "24": "Bien, solo hay una cosa más para discutir. Empezaremos fácilmente y posteriormente se hara algo loco con ello. Si quieres desicribir algo dos veces, por ejemplo por tipo y por nombre, simplemente mete ambos juntos:",
+    "e18": "mia amiko Tomaso estas tie.",
+    "25": "Preo, ¿qué se puede hacer si encontramos una palabra para ello? Entionces debemos usar una frase. Piensa, la frase toma la posición del nombre: Eso es suficiente para comunicar para comunicar una idea, pero mediante muchas palabras. Provemos:",
+    "e19": "mi ŝatas la ideon ke katoj povu flugi.",
+    "26": "\"la ideon\" La idea no tiene suficiente información porque no dice qué es, debemos indicar qué es esa idea (que los gatos puedan volar). La palabra <em>ke</em> ahora dice \"jen frazo\". Se pueden hacer muchas cosas con este método. Provemos un par de frases:",
+    "e20": "mi estas kontenta, pro tio ke vi estas ĉi tie.",
+    "27": "La palabra \"tio\" significa \"tiu afero\", pero qué cosa. ¡No lo dice! Entonces añadimos una frase para explicarlo. DE hecho, la \"tio\" no es muy interesante, lo podemos olvidar. Igualmente, probablemente no necesitamos  \"pro\" - Se adivina cuál es la causa de esto ¿no? Podríamos decir:",
+    "e21": "mi estas kontenta ke vi estas ĉi tie.",
+    "28": "Pero, ¡recuerda! ¡Cuantas más palabras falten más fácil es que todo explote!",
+    "29": "Mientras hablo de olvidar palabras, hay otro tipo de asunto verbal, que no es auténticamente un verbo. Si la palabra finaliza con <em>-i</em>, esto es una idea general sobre el verbo. El suceso no ocurre, simplemente, de alguna manera existe e indica que una frase entera existe, sin decirla. Prueba a reflexionar si algien lo comprendería mal.",
+    "e22": "la kato volas dormi.",
+    "30": "Y, finalmente, hay algunis asuntos que no puedo explicar ahora. Ciertamente son algo confusos y frecuentemente tratan sobre raices muy útiles <em>ig</em> e <em>iĝ</em>.",
+    "e23": "tio interesas min. mi interesiĝas.",
+    "e24": "la kato bluiĝis, ĉar mi bluigis ĝin.",
+    "31": "También estan los participios que permiten usar palabras que tiene sentido de acción (verbales) para describir algo (funcionan como adjetivos). Por ejemplo para decir que algo está hecho. Hay 6 participios, pero ellos están hechos de manera sistemática y probablemente los comprenderás",
+    "e25": "mi estus farinta tion. mi estos faranta tion. finfine, tio estos farita.",
+    "e26": "trovinte la hundon, mi estas serĉonta la katon.",
+    "32": "Atiende, he prometido hablar sobre esas ki- kaj ti- y neni- palabras y no lo he hecho. De hecho no he mencionado neni- antes de ahora. Bueno, he aquí los comienzos y finales de algunas palabra. Simplemente, combínalos:",
+    "tabelti": "tiu",
+    "tabelki": "kiu",
+    "tabeli": "iu",
+    "tabelneni": "neniu",
+    "tabelcxi": "ĉiu",
+    "tabelo": "algo (esto es un sustantivo)",
+    "tabelu": "alguien (esto es una especie de adjetivo)",
+    "tabela": "tipo (también adjetivo)",
+    "tabeles": "pertenencia (otra vez adjetivo)",
+    "tabelel": "manera (esto es un adverbio)",
+    "tabele": "lugar (y como esto los demás más o menos)",
+    "tabelam": "tiempo",
+    "tabelal": "motivo",
+    "tabelom": "cantidad",
+    "33": "En algún sitio he olvidadi algunas palabras básicas. Veamos algunas frases adicionales:",
+    "e27": "vi, kaj mi, kaj la kato, estas ĉi tie, sed la hundo mankas.",
+    "e28": "nun, la kato bojas kiel hundo. aŭ eble tio estas la hundo.",
+    "e29": "la lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
+    "34": "Sí, es suficiente.",
+    "end": "y ahora qué? Aprende, usa, disfruta. Har cursos en Internet en <a href=\"https://lernu.net\">lernu.net</a>, y en <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://learn.esperanto.com/\">El esperanto en 12 lecciones</a>. O, incluso mejor, únete a un kurso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">El Club Esperantista de Londres</a>."
   },
   "fr": {
     "title": "Espéranto en 17 minuits"
   },
-  "de": {
-    "title": "Esperanto in 17 Minuten"
+  "pl": {
+    "title": "Esperanto w 17 minut"
   },
-  "es": {
-    "title": "Esperanto en 17 minutos"
+  "se": {
+    "title": "Esperanto på 17 minuter"
   }
 }
 
