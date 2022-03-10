@@ -257,6 +257,11 @@ function setupLanguageChooser() {
     let lang = select.value
     translate(lang)
   })
+  select.addEventListener('click', e => {
+    if (e.ctrlKey) {
+      showIDs()
+    }
+  })
 }
 
 function setupAudio(e) {
@@ -274,6 +279,13 @@ function setupAudio(e) {
     e.classList.remove('playing')
   })
   e.append('🔉\ufe0e')
+}
+
+function showIDs() {
+  for (let e of document.querySelectorAll('.learn')) {
+    let id = e.getAttribute('tid')
+    e.innerHTML = `[${id}] ${e.innerHTML}`
+  }
 }
 
 function main() {
