@@ -326,11 +326,16 @@ function flag(code) {
 function setupLanguageChooser() {
   let chooser = document.querySelector('.languagechooser')
   let select = chooser.querySelector('select')
-  for (let lang of Object.keys(translations).sort()) {
+
+  let addLanguage = code => {
     let opt = document.createElement('option')
-    opt.value = lang
-    opt.append(flag(lang))
+    opt.value = code
+    opt.append(flag(code))
     select.append(opt)
+  }
+
+  for (let lang of Object.keys(translations).sort()) {
+    addLanguage(lang)
   }
 
   let dispatch = () => {
@@ -343,6 +348,12 @@ function setupLanguageChooser() {
   let firstLang = navigator.language.split('-')[0]
   select.value = firstLang
   dispatch()
+
+  document.addEventListener('new-language', e => {
+    let lang = e.detail
+    // doesn't add in order
+    addLanguage(lang)
+  })
 }
 
 function setupMainPage() {
@@ -459,6 +470,16 @@ function setupTranslationPage() {
     }
 
     translate(nowLanguage)
+
+    document.querySelector('button[name=addlanguage]').addEventListener('click', e => {
+      e.preventDefault()
+      let lang = prompt('nova lingvo (dulitera kodo):')
+      if (lang && !translations[lang]) {
+        translations[lang] = {}
+
+        document.dispatchEvent(new CustomEvent('new-language', { detail: lang }))
+      }
+    })
   }
 
   let toLesson = () => {
@@ -478,11 +499,13 @@ function setupTranslationPage() {
 
   let onTrans = false
   document.body.addEventListener('dblclick', e => {
-    onTrans = !onTrans
-    if (onTrans) {
-      toTrans()
-    } else {
-      toLesson()
+    if (e.ctrlKey) {
+      onTrans = !onTrans
+      if (onTrans) {
+        toTrans()
+      } else {
+        toLesson()
+      }
     }
   })
 
