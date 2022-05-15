@@ -11,7 +11,5 @@ de la subo de la traduka paĝo, kaj sendu ĝin per GitHub.
 
 Estas butono en la traduka paĝo por aldoni lingvon.
 
-Atentu ke novaj tradukoj ne estas konservitaj en la retumiloj.
-
 Aŭ vi povas rekte ŝanĝi tradukojn en [ĉi tiu dosiero](js/main.js), se vi
 komprenas JSON'on.

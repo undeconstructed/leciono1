@@ -296,7 +296,7 @@ const translations = {
   }
 }
 
-const localTranslations = {}
+let localTranslations = {}
 
 function flag(code) {
   if (code === 'eo') {
@@ -334,9 +334,14 @@ function setupLanguageChooser() {
     select.append(opt)
   }
 
-  for (let lang of Object.keys(translations).sort()) {
-    addLanguage(lang)
+  let setup = () => {
+    select.replaceChildren()
+    let langs = [...new Set([...Object.keys(translations), ...Object.keys(localTranslations)])].sort()
+    for (let lang of langs) {
+      addLanguage(lang)
+    }
   }
+  setup()
 
   let dispatch = () => {
     let lang = select.value
@@ -346,13 +351,17 @@ function setupLanguageChooser() {
   select.addEventListener('change', dispatch)
 
   let firstLang = navigator.language.split('-')[0]
-  select.value = firstLang
+  if (translations[firstLang]) {
+    select.value = firstLang
+  } else {
+    select.value = 'en'
+  }
   dispatch()
 
   document.addEventListener('new-language', e => {
-    let lang = e.detail
-    // doesn't add in order
-    addLanguage(lang)
+    setup()
+    select.value = e.detail
+    dispatch()
   })
 }
 
@@ -364,7 +373,11 @@ function setupMainPage() {
 
     for (let e of document.querySelectorAll('.learn')) {
       let id = e.getAttribute('tid')
-      e.innerHTML = localText[id] || text[id] || baseText[id]
+      let line = localText[id]
+      if (line) {
+        line = '* ' + line
+      }
+      e.innerHTML = line || text[id] || baseText[id]
     }
 
     document.title = text['title'] || baseText['title']
@@ -403,6 +416,11 @@ function setupMainPage() {
 function setupTranslationPage() {
   let tmpl = document.getElementById('translationtmpl').content.firstElementChild
 
+  let lc = localStorage.getItem('translations')
+  if (lc) {
+    localTranslations = JSON.parse(lc)
+  }
+
   let nowLanguage = null
   let translationInputs = []
   let asJsonBox = document.querySelector('.asjson')
@@ -419,10 +437,13 @@ function setupTranslationPage() {
   }
 
   let showJson = l => {
+    let trans0 = translations[nowLanguage] || {}
     let t = `"${l}": {\n`
     for (let {id, box} of translationInputs) {
       if (box.value) {
         t += `  "${id}": ${JSON.stringify(box.value)},\n`
+      } else if (trans0[id]) {
+        t += `  "${id}": ${JSON.stringify(trans0[id])},\n`
       }
     }
     t += '}'
@@ -430,13 +451,17 @@ function setupTranslationPage() {
   }
 
   let saveTranslation = () => {
+    let trans0 = translations[nowLanguage] || {}
     let texts = {}
     for (let {id, box} of translationInputs) {
-      if (box.value) {
+      if (box.value && box.value != trans0[id]) {
         texts[id] = box.value
       }
     }
     localTranslations[nowLanguage] = texts
+
+    localStorage.setItem('translations', JSON.stringify(localTranslations))
+
     showJson(nowLanguage)
   }
 
@@ -469,15 +494,24 @@ function setupTranslationPage() {
       })
     }
 
-    translate(nowLanguage)
-
     document.querySelector('button[name=addlanguage]').addEventListener('click', e => {
       e.preventDefault()
-      let lang = prompt('nova lingvo (dulitera kodo):')
+      let lang = prompt('Nova lingvo (du- aŭ tri- litera kodo):')
       if (lang && !translations[lang]) {
         translations[lang] = {}
 
         document.dispatchEvent(new CustomEvent('new-language', { detail: lang }))
+      }
+    })
+
+    document.querySelector('button[name=cleartranslation]').addEventListener('click', e => {
+      e.preventDefault()
+      if (confirm('Ĉu forigi lokan tradukon por la nuna lingvo?')) {
+        delete localTranslations[nowLanguage]
+        // XXX - copy and pasted to save
+        localStorage.setItem('translations', JSON.stringify(localTranslations))
+        // XXX - copy pasted to trigger refresh
+        document.dispatchEvent(new CustomEvent('language-change', { detail: nowLanguage }))
       }
     })
   }
@@ -494,6 +528,7 @@ function setupTranslationPage() {
       setup2()
       firstTime = false
     }
+    translate(nowLanguage)
     document.body.classList.add('trans')
   }
 
