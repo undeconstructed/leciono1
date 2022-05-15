@@ -150,6 +150,38 @@ p.oe, p.tr {
   height: 1rem;
 }
 
+.idtag {
+  margin-right: .2em;
+  font-size: 1rem;
+}
+
+.asjson {
+  white-space: pre;
+  font-family: monospace;
+  overflow-x: auto;
+}
+
+body .transpage {
+  display: none;
+}
+body.trans .lessonpage {
+  display: none;
+}
+body.trans .transpage {
+  display: block;
+}
+
+body .idtag {
+  display: none;
+}
+body.trans .idtag {
+  display: unset;
+}
+
+.transpage input[type=text] {
+  width: 100%;
+}
+
 @media (max-width:60rem) {
   .languagechooser {
     position: fixed;

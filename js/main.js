@@ -296,33 +296,18 @@ const translations = {
   }
 }
 
-function translate(lang) {
-  let baseText = translations['en']
-
-  let text = translations[lang]
-  if (!text) {
-    // don't have appropriate translation
-    return
-  }
-
-  for (let e of document.querySelectorAll('.learn')) {
-    let id = e.getAttribute('tid')
-    e.innerHTML = text[id] || baseText[id]
-  }
-
-  document.title = text['title'] || baseText['title']
-
-  document.querySelector('.languagechooser select').value = lang
-}
+const localTranslations = {}
 
 function flag(code) {
-  if (code == 'eo') {
+  if (code === 'eo') {
     // let f = document.createElement('div')
     // f.classList.add('eoflag')
     return 'Eo'
   }
-  if (code == 'en') {
+  if (code === 'en') {
     code = 'gb'
+  } else if (code === 'pt') {
+    code = 'br'
   }
 
   const aL = 'a'.codePointAt(0)
@@ -347,39 +332,166 @@ function setupLanguageChooser() {
     opt.append(flag(lang))
     select.append(opt)
   }
-  select.addEventListener('change', _e => {
+
+  let dispatch = () => {
     let lang = select.value
-    translate(lang)
+    document.dispatchEvent(new CustomEvent('language-change', { detail: lang }))
+  }
+
+  select.addEventListener('change', dispatch)
+
+  let firstLang = navigator.language.split('-')[0]
+  select.value = firstLang
+  dispatch()
+}
+
+function setupMainPage() {
+  let translate = lang => {
+    let baseText = translations['en']
+    let text = translations[lang] || {}
+    let localText = localTranslations[lang] || {}
+
+    for (let e of document.querySelectorAll('.learn')) {
+      let id = e.getAttribute('tid')
+      e.innerHTML = localText[id] || text[id] || baseText[id]
+    }
+
+    document.title = text['title'] || baseText['title']
+  }
+
+  let setupAudioElement = e => {
+    let id = e.getAttribute('fid')
+    let eAudio = document.createElement('audio')
+    eAudio.src = `sound/e${id}.mp3`
+    e.append(eAudio)
+    e.addEventListener('click', _e => {
+      eAudio.play()
+    })
+    eAudio.addEventListener('play', _e => {
+      e.classList.add('playing')
+    })
+    eAudio.addEventListener('ended', _e => {
+      e.classList.remove('playing')
+    })
+    e.append('🔉\ufe0e')
+  }
+
+  let setupAudio = () => {
+    for (let e of document.querySelectorAll('.listen')) {
+      setupAudioElement(e)
+    }
+  }
+
+  document.addEventListener('language-change', e => {
+    translate(e.detail)
   })
-  select.addEventListener('click', e => {
-    if (e.ctrlKey) {
-      showIDs()
+
+  setupAudio()
+}
+
+function setupTranslationPage() {
+  let tmpl = document.getElementById('translationtmpl').content.firstElementChild
+
+  let nowLanguage = null
+  let translationInputs = []
+  let asJsonBox = document.querySelector('.asjson')
+
+  let translate = lang => {
+    let text = translations[lang] || {}
+    let localText = localTranslations[lang] || {}
+
+    for (let {id, box} of translationInputs) {
+      box.value = localText[id] || text[id] || ''
+    }
+
+    showJson(lang)
+  }
+
+  let showJson = l => {
+    let t = `"${l}": {\n`
+    for (let {id, box} of translationInputs) {
+      if (box.value) {
+        t += `  "${id}": ${JSON.stringify(box.value)},\n`
+      }
+    }
+    t += '}'
+    asJsonBox.textContent = t
+  }
+
+  let saveTranslation = () => {
+    let texts = {}
+    for (let {id, box} of translationInputs) {
+      if (box.value) {
+        texts[id] = box.value
+      }
+    }
+    localTranslations[nowLanguage] = texts
+    showJson(nowLanguage)
+  }
+
+  // for (let e of document.querySelectorAll('.learn')) {
+  //   let id = e.getAttribute('tid')
+  //   let idtag = document.createElement('span')
+  //   idtag.classList.add('idtag')
+  //   idtag.textContent = `[#${id}]`
+  //   e.prepend(idtag)
+  // }
+
+  let setup2 = () => {
+    let eoText = translations['eo']
+
+    let translationsBox = document.querySelector('.translations')
+    for (let e of document.querySelectorAll('.learn')) {
+      let id = e.getAttribute('tid')
+      let tb = tmpl.cloneNode(true)
+      tb.querySelector('.src').textContent = eoText[id]
+      let box = tb.querySelector('input[type=text]')
+      box.addEventListener('change', e => {
+        saveTranslation(nowLanguage)
+      })
+
+      translationsBox.append(tb)
+
+      translationInputs.push({
+        id: id,
+        box: box,
+      })
+    }
+
+    translate(nowLanguage)
+  }
+
+  let toLesson = () => {
+    document.body.classList.remove('trans')
+    // XXX - copy pasted to trigger refresh
+    document.dispatchEvent(new CustomEvent('language-change', { detail: nowLanguage }))
+  }
+
+  let firstTime = true
+  let toTrans = () => {
+    if (firstTime) {
+      setup2()
+      firstTime = false
+    }
+    document.body.classList.add('trans')
+  }
+
+  let onTrans = false
+  document.body.addEventListener('dblclick', e => {
+    onTrans = !onTrans
+    if (onTrans) {
+      toTrans()
+    } else {
+      toLesson()
     }
   })
-}
 
-function setupAudio(e) {
-  let id = e.getAttribute('fid')
-  let eAudio = document.createElement('audio')
-  eAudio.src = `sound/e${id}.mp3`
-  e.append(eAudio)
-  e.addEventListener('click', _e => {
-    eAudio.play()
+  document.addEventListener('language-change', e => {
+    nowLanguage = e.detail
+    if (onTrans) {
+      translate(nowLanguage)
+    }
   })
-  eAudio.addEventListener('play', _e => {
-    e.classList.add('playing')
-  })
-  eAudio.addEventListener('ended', _e => {
-    e.classList.remove('playing')
-  })
-  e.append('🔉\ufe0e')
-}
-
-function showIDs() {
-  for (let e of document.querySelectorAll('.learn')) {
-    let id = e.getAttribute('tid')
-    e.innerHTML = `[${id}] ${e.innerHTML}`
-  }
 }
 
 function main() {
@@ -389,16 +501,12 @@ function main() {
     en[id] = e.innerHTML
     translations['en'] = en
   }
-  // console.log(JSON.stringify(en, '', '  '))
+
+  setupMainPage()
+
+  setupTranslationPage()
 
   setupLanguageChooser()
-
-  let firstLang = navigator.language.split('-')[0]
-  translate(firstLang)
-
-  for (let e of document.querySelectorAll('.listen')) {
-    setupAudio(e)
-  }
 }
 
 document.addEventListener('DOMContentLoaded', main)
