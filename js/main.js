@@ -472,9 +472,11 @@ function setupMainPage() {
         line = '* ' + line
       }
       e.innerHTML = line || text[id] || baseText[id]
+      // e.lang = lang
     }
 
     document.title = text['title'] || baseText['title']
+    document.documentElement.lang = lang
   }
 
   let setupAudioElement = e => {
@@ -525,6 +527,7 @@ function setupTranslationPage() {
 
     for (let {id, box} of translationInputs) {
       box.value = localText[id] || text[id] || ''
+      box.lang = lang
     }
 
     showJson(lang)
