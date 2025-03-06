@@ -5,8 +5,8 @@ const translations = {
   },
   "eo": {
     "title": "Esperanto en 17 minutoj",
-    "01": "(Ĉi tio ne estas Esperanto-kurso, sed ĝi donu al vi ideon pri kio la lingvo estas, kaj vi verŝajne povus lerni la plimulton de tio kion vi bezonas per ĉi tio, kaj per iom da legado.)",
-    "02": "Esperanto estas aro da vortradikoj, kaj sistemo por aranĝi ilin por ke oni povu uzi ilin por krei ion pli grandan. Ni komencu.",
+    "01": "Okej, ne eblas lerni ajnan lingvon en 17 minutoj. Sed pri Esperanto oni povas atingi ideon pri ĉio tre rapide, kaj ĉar Esperanto estas tiom konsekvenca, oni bezonas lerni aferojn nur unufoje.",
+    "02": "Esperanto estas neŭtrala kaj internacia lingvo, kreita por ĉiuj. Sed ankaŭ, Esperanto estas aro da vortradikoj, kaj sistemo por aranĝi ilin por ke oni povu uzi ilin por krei ion pli grandan - se oni komprenas tiun sistemonm, oni povas diri ion ajn. Ni komencu.",
     "03": "Rigardu tra la fenestro. Verŝajne pluvas. La radiko por tio estas <em>pluv-</em>.",
     "04": "Pluvo estas kialo por paroli. Por diri ke pluvas, prenu la radiko \"pluv-\", kaj verbigu ĝin, per aldono de la finaĵo kiu signifas \"okazas nun\": <em>-as</em>.",
     "e01": "Pluvas.",
@@ -507,6 +507,28 @@ function setupMainPage() {
   })
 
   setupAudio()
+
+  let setupFlow = () => {
+    let page = document.querySelector('.lessonpage')
+    let nextBox = page.querySelector('.next')
+
+    nextBox.replaceChildren()
+
+    for (let e of document.querySelectorAll('.part')) {
+      e.style.opacity = 0
+    }
+
+    document.addEventListener('scroll', e => {
+      let d = document.documentElement.scrollTop + document.documentElement.clientHeight - 50
+      for (let e of document.querySelectorAll('.part')) {
+        if (d > e.offsetTop) {
+          e.style.opacity = 1
+        }
+      }
+    })
+  }
+
+  setupFlow()
 }
 
 function setupTranslationPage() {
