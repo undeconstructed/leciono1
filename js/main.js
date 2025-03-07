@@ -1,8 +1,8 @@
 
 const translations = {
-  "de": {
-    "title": "Esperanto in 17 Minuten"
-  },
+  // "de": {
+  //   "title": "Esperanto in 17 Minuten"
+  // },
   "eo": {
     "title": "Esperanto en 17 minutoj",
     "01": "Okej, ne eblas lerni ajnan lingvon en 17 minutoj. Sed pri Esperanto oni povas atingi ideon pri ĉio tre rapide, kaj ĉar Esperanto estas tiom konsekvenca, oni bezonas lerni aferojn nur unufoje.",
@@ -10,7 +10,7 @@ const translations = {
     "03": "Rigardu tra la fenestro. Verŝajne pluvas. La radiko por tio estas <em>pluv-</em>.",
     "04": "Pluvo estas kialo por paroli. Por diri ke pluvas, prenu la radiko \"pluv-\", kaj verbigu ĝin, per aldono de la finaĵo kiu signifas \"okazas nun\": <em>-as</em>.",
     "e01": "Pluvas.",
-    "05": "Tio estas frazo. Oni konstruas frazon ĉirkaŭ verbo - tiu verbo enhavas la kialon por fari la frazon, kaj marko kiu diras kiam tiu afero okazas. Estas kvin finaĵoj:",
+    "05": "Tio estas frazo. Oni konstruas frazon ĉirkaŭ verbo - tiu verbo enhavas la kialon por fari la frazon, kaj finan markon kiu diras kiam tiu afero okazas. Estas kvin finaĵoj:",
     "verb-is": "okazis en la pasinteco",
     "verb-as": "okazas nun",
     "verb-os": "verŝajne okazos iam en la estonteco",
@@ -95,15 +95,15 @@ const translations = {
     "e28": "Nun, la kato bojas kiel hundo. Aŭ eble tio estas la hundo.",
     "e29": "La lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
     "34": "Jes. Tio sufiĉos.",
-    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://learn.esperanto.com/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
+    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
   },
   "es": {
     "title": "Esperanto en 17 minutos",
-    "01": "Esto no es un verdadero curso de Esperanto, pero te dará la idea de como es este idioma y, probablemente, puedas aprender la mayoria de lo que necesitas mediante este texto y algo de lectura.",
-    "02": "El esperanto tiene un conjunto de raices y un sistema que permite unirlas para crear palabras más grandes. Comencemos.",
+    "01": "Está bien, no es posible aprender ningún idioma en 17 minutos. Pero con el esperanto puedes hacerte una idea de todo muy rápidamente y, como el esperanto es tan coherente, solo necesitas aprender las cosas una vez",
+    "02": "El esperanto es una lengua neutral e internacional, creada para todos. Pero también es un conjunto de raíces de palabras y un sistema para ordenarlas de modo que puedan usarse para crear algo más grande. Si entiendes ese sistema, puedes decir cualquier cosa. Empecemos.",   "03": "Rigardu tra la fenestro. Verŝajne pluvas. La radiko por tio estas <em>pluv-</em>.",
     "03": "Mira por la ventana. Quizá llueva. La raíz para esto es <em>pluv-</em>.",
-    "04": "La lluvia es algo sobre lo que se puede hablar. Para decir que llueve, usa la raíz \"pluv-\" y tranformala en un verbo añadiendo un sufijo que significa \"ocurre ahora\": <em>-as</em>.",
-    "e01": "llueve.",
+    "04": "La lluvia es algo sobre lo que se puede hablar. Para decir que llueve, usa la raíz \"pluv-\" y transformala en un verbo añadiendo un sufijo que significa \"ocurre ahora\": <em>-as</em>.",
+    "e01": "Llueve.",
     "05": "Esto es una frase. Se construye una frase alrededor de un verbo. Un verbo tiene la capacidad de hacer una frase que indica una acción. Existen cinco sufijos que indican cuándo ocurre la acción:",
     "verb-is": "ocurrió en el pasado",
     "verb-as": "ocurre ahora",
@@ -131,14 +131,14 @@ const translations = {
     "e10": "Ese gato cazaría un perro, si encontrara un perro.",
     "e11": "A ese gato no le gustan los perros porque son ruidosos.",
     "16": "Mientras tanto, veamos los pronombres:",
-    "mi": "La persona que habla: yo.",
-    "ni": "Las personas que hablan: nosotros.",
-    "vi": "La persona o personas con las que se habla: tú, usted, vosotros, ustedes. ",
-    "gxi": "La cosa de la que se habla: ello. ",
-    "li": "Alguien del que se habla: él.",
-    "sxi": "Alguien femenino del que se habla: ella",
-    "ili": "Varias personas o cosas de las que se habla: ellos",
-    "oni": "Alguien, se",
+    "mi": "la persona que está hablando",
+    "ni": "el hablante y sus compañeros",
+    "vi": "a quién, ese le habla",
+    "gxi": "otra cosa",
+    "li": "otro hombre",
+    "sxi": "otra mujer",
+    "ili": "varias otras cosas o personas",
+    "oni": "simplemente, alguien",
     "17": "\"Pero\", tu preguntas, \"¿qué hay sobre la neutralidad de genero?\". Volveremos sobre ese tema después.",
     "18": "Bien, ahora viene una parte difícil. ¿Estás preparado? A veces hay que unir frases de una manera especial en la que uno coge una idea de una frase y la introduce en otra. Para eso usamos la palabra <em>kiu</em>, que es como <em>tiu</em>, pero especial para citar la idea en otra frase:",
     "e12": "El gato que caza perros es feliz.",
@@ -189,18 +189,109 @@ const translations = {
     "e28": "Ahora, el gato ladra como un perro. O quizá eso es un perro.",
     "e29": "El idioma se aprende fácilmente y merece la pena ser aprendido y pronto estará aprendido.",
     "34": "Sí, es suficiente.",
-    "end": "¿Y ahora qué? Aprende, usa, disfruta. Hay cursos en Internet en <a href=\"https://lernu.net\">lernu.net</a>, y en <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://learn.esperanto.com/\">Esperanto en 12 tagoj</a>. O, incluso mejor, únete a un kurso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">El Club Esperantista de Londres</a>."
+    "end": "¿Y ahora qué? Aprende, usa, disfruta. Hay cursos en Internet en <a href=\"https://lernu.net\">lernu.net</a>, y en <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 tagoj</a>. O, incluso mejor, únete a un kurso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">El Club Esperantista de Londres</a>."
   },
   "fr": {
-    "title": "Espéranto en 17 minuits"
+    "title": "L'espéranto en 17 minutes",
+    "01": "D'accord, il n'est pas possible d'apprendre une langue en 17 minutes. Mais avec l'espéranto, on peut se faire une idée de tout très rapidement, et comme l'espéranto est si cohérent, on n'a besoin d'apprendre les choses qu'une seule fois.",
+    "02": "L'espéranto est une langue neutre et internationale, créée pour tout le monde. Mais l'espéranto est aussi un ensemble de racines de mots et un système pour les organiser afin qu'elles puissent être utilisées pour créer quelque chose de plus grand - si vous comprenez ce système, vous pouvez dire n'importe quoi. Commençons.",
+    "03": "Regardez par la fenêtre. Il pleut probablement. La racine de ce mot est <em>pluv-</em>.",
+    "04": "La pluie est une raison de parler. Pour dire qu'il pleut, prenez la racine \"pluv-\", et en faite un verbe, en ajoutant la terminaison qui signifie \"est en train de se produire maintenant\" : <em>-as</em>.",
+    "e01": "Il pleut.",
+    "05": "Ceci est une phrase. Une phrase est construite autour d'un verbe - ce verbe contient la raison pour laquelle la phrase est faite, et une terminaison qui indique quand cette chose se produit. Il y a cinq terminaisons :",
+    "verb-is": "s'est produit dans le passé",
+    "verb-as": "cela se passe maintenant",
+    "verb-os": "cela se produira probablement un jour dans le futur",
+    "verb-us": "se produit dans un monde imaginaire",
+    "verb-u" : "quelqu'un veut que cela se produise",
+    "06": "Parfois, vous voulez dire qui ou quoi fait le verbe. C'est très simple : prenez la racine de cette chose et rendez-la substantielle avec la terminaison <em>-o</em>.",
+    "e02": "Un chat courait",
+    "07": "Si vous souhaitez utiliser un autre concept pour décrire un nom, prenez la racine de ce concept et ajoutez <em>-a</em> pour en faire un adjectif :",
+    "e03": "Le chat bleu va dormir.",
+    "08": "Il peut y avoir un autre concept qui est en quelque sorte lié à cette action. Il peut y avoir un endroit où elle a lieu. Pour ajouter un autre nom, vous pouvez l'introduire avec une préposition, pour dire comment il se rapporte à l'action.",
+    "e04": "Un chat bleu est assis devant une télévision (appareil de télévision).",
+    "09": "Parfois, il n'y a pas de préposition évidente à choisir, ou vous ne voulez tout simplement pas l'utiliser. Dans ce cas, vous pouvez marquer le nom (et ses adjectifs) avec une terminaison <em>-n</em>, pour dire \"vous savez de quoi il s'agit\".",
+    "e05": "Un chaton n'aime pas les fortes pluies.",
+    "10": "Au fait, comme tout est clairement indiqué, vous pouvez réorganiser un peu les mots :",
+    "e06": "Un chat déteste (n'aime pas) la pluie froide.",
+    "11": "Mais ne le faites pas trop souvent, utilisez-le uniquement lorsque cela rend la phrase plus facile à comprendre.",
+    "12": "Il reste un autre type de mot à apprendre : les adverbes. Je ne sais pas exactement ce qu'est un adverbe, mais il se termine par <em>-e</em> et est utilisé pour décrire tout ce qui n'est pas un nom. Ils sont très flexibles (peut-être dangereusement !), mais commencez par les placer avant le mot qu'ils décrivent, et vous aurez vite compris l'idée :",
+    "e07": "Le chat soudainement mouillé (pas sec) court rapidement (court).",
+    "13": "Parfois, vous devez être plus précis que simplement « chat » : vous devez dire de quel chat il s'agit. L'option la plus simple est d'utiliser <em>la</em>, ce qui signifie essentiellement « vous savez qui ».",
+    "e08": "Le chat mange de la nourriture (quelque chose à manger).",
+    "14": "Ou peut-être que c'est plutôt \"celui dont nous parlons\": ",
+    "e09": "Ce chat chasserait les chiens.",
+    "15": "Si vous souhaitez relier plusieurs phrases entre elles, vous avez besoin de mots pour le faire. Vous aurez toujours une phrase principale, comme auparavant, mais les phrases liées auront besoin d'une introduction, par exemple :",
+    "e10": "Ce chat chasserait les chiens s'il en trouvait.",
+    "e11": "Ce chat n'aime pas les chiens parce qu'ils sont bruyants.",
+    "16": "Pendant que nous y sommes, faisons tous les pronoms :",
+    "mi": "la personne qui parle",
+    "ni": "l’orateur et ses compagnons",
+    "vi" : "à qui, celui-là parle",
+    "gxi": "une autre chose",
+    "li": "un autre homme",
+    "sxi": "une autre femme",
+    "ili": "plusieurs autres choses ou personnes",
+    "oni": "simplement, quelqu'un",
+    "17": "\"Mais\", demandez-vous, \"qu'en est-il de la neutralité de genre ?\". Eh bien, nous reviendrons sur ce sujet plus tard.",
+    "18": "D'accord, maintenant vient la partie difficile. Êtes-vous prêt ? Parfois, vous souhaitez relier des phrases d'une manière spéciale, en prenant une idée d'une phrase et en la plaçant d'une manière ou d'une autre dans une autre. Pour ce faire, vous utilisez le mot <em>kiu</em>, qui ressemble à <em>tiu</em>, mais qui sert spécifiquement à citer une idée dans une nouvelle phrase :",
+    "e12": "Le chat qui chasse les chiens est heureux.",
+    "19": "Hm, est-ce que c'est assez clair que le « kiu » concerne le chat ? Oui, probablement, mais nous pouvons être plus clairs :",
+    "e13": "Le chat, qui est un gros chat, est endormi (a tendance à dormir).",
+    "20": "En fait, nous pouvons prendre n'importe quelle idée de la phrase principale et la mettre dans une proposition subordonnée, il suffit de dire de quel genre de chose il s'agit :",
+    "e14": "Je l'ai fait à huit heures, et à ce moment-là, j'ai ri.",
+    "21": "En fait, il existe un certain nombre d'installations qui peuvent être utilisées pour de telles choses :",
+    "e15": "Je suis content quand je suis avec toi.",
+    "22": "Nous parlerons de tous ces mots plus tard, mais pour l'instant, en voici un de plus : Parfois, vous voulez juste parler de... quelque chose. On ne sait pas exactement de quel genre de chose il s'agit, c'est juste quelque chose. Essayons ceci :",
+    "e16": "Qu'est-ce que c'est ? C'est un chat.",
+    "23": "Oh, oui, ces mots <em>ki-</em> sont également adaptés aux questions. Considérez-les comme \"mettez la chose appropriée ici, s'il vous plaît\". Il existe également un moyen simple de poser une question par oui/non :",
+    "e17": "Vous comprenez ? Oui .. et non.",
+    "24": "Ok. Il reste encore une chose à discuter. Nous commencerons doucement, puis nous nous lancerons dans une aventure folle. Si vous voulez décrire quelque chose deux fois, par exemple par type et par nom, mettez-les simplement ensemble :",
+    "e18": "Mon ami Thomas est là.",
+    "25": "Mais que faire si vous ne trouvez pas de mot pour quelque chose ? Eh bien, vous devriez utiliser une phrase. Considérez la phrase comme prenant la place d'un nom : elle contient suffisamment d'informations pour communiquer une idée, mais en plusieurs mots. Essayons :",
+    "e19": "J'aime l'idée que les chats puissent voler.",
+    "26": "\"la ideon\" (l'idée) n'a pas assez d'informations, car elle n'a pas dit quelle est l'idée, donc nous ajoutons une phrase qui dit quelle est l'idée. Le petit mot <em>ke</em> dit simplement \"voici une phrase\". Il y a beaucoup de choses que nous pouvons faire avec cela, alors essayons quelques choses :",
+    "e20": "Je suis content que tu sois là.",
+    "27": "Le mot \"ke\" signifie \"cette chose\", mais quelle chose ?! Il ne le dit pas !! Eh bien, c'est pourquoi nous avons ajouté une phrase pour expliquer. En fait, le \"ke\" n'est pas très intéressant, nous pourrions probablement le laisser de côté. De même, nous n'aurions peut-être pas besoin du \"pro\" - on pourrait deviner qu'il s'agit de la cause de quelque chose, n'est-ce pas ? Peut-être pourrions-nous simplement dire :",
+    "e21": "Je suis content que tu sois là.",
+    "28": "Mais n'oubliez pas ! Plus vous jetez de mots, plus le risque est grand que tout explose !",
+    "29": "Pendant que nous parlons de jeter des mots, il existe un autre type de chose verbale qui n'est pas vraiment un verbe. Si un mot se termine par <em>-i</em>, c'est une sorte d'idée générale d'un verbe. L'événement ne se produit pas, il existe simplement d'une manière ou d'une autre, et indique qu'une phrase complète existe, non prononcée. Mais essayez de comprendre si quelqu'un pourrait mal comprendre.",
+    "e22": "Le chat veut dormir.",
+    "30": "Et enfin, il y a quelques points que je ne veux pas expliquer maintenant. Ils seront certainement un peu déroutants et impliquent souvent les racines très utiles <em>ig</em> et <em>iĝ</em>.",
+    "e23": "Cela m'intéresse. Je suis intéressé.",
+    "e24": "Le chat est devenu bleu parce que je l'ai rendu bleu.",
+    "31": "Et il y a aussi des participes, qui permettent d'utiliser des concepts d'action pour décrire des choses, par exemple pour dire que quelque chose est en train d'être fait. Il y a 6 participes, mais ils suivent un bon modèle, donc vous comprendrez. Probablement.",
+    "e25": "J'aurais fait ça. Je vais le faire. Finalement, ce sera fait.",
+    "e26": "Ayant trouvé le chien, je vais chercher le chat.",
+    "32": "Oh, attendez, j'ai promis de parler de ces mots ki-, ti- et neni-, et je ne l'ai pas fait. En fait, je n'ai même jamais mentionné neni- avant maintenant. D'accord, voici les débuts et les fins de certains mots, mettez-les simplement ensemble :",
+    "tabelti": "cela",
+    "tabelki": "qui",
+    "tabeli": "quelqu'un",
+    "tabelneni": "aucun",
+    "tabelcxi": "chacun",
+    "tabelo": "chose (c'est un nom)",
+    "tabelu": "individuel (c'est un type d'adjectif)",
+    "tabela": "type (également adjectif)",
+    "tabeles": "d'un individu (encore une fois, adjectif)",
+    "tabelel": "manière (c'est un adverbe)",
+    "tabele": "lieu (et le reste aussi, plus ou moins)",
+    "tabelam": "heure/quand",
+    "tabelal": "raison",
+    "tabelom": "quantité/combien",
+    "33": "J'ai oublié certains mots de base, alors regardons quelques phrases supplémentaires :",
+    "e27": "Toi, moi et le chat sommes là, mais le chien a disparu.",
+    "e28": "Maintenant, le chat aboie comme un chien. Ou peut-être que c'est le chien.",
+    "e29": "La langue est facile à apprendre, vaut la peine d'être apprise et sera bientôt apprise.",
+    "34": "Oui. Cela suffira.",
+    "end": "Et maintenant ? Apprenez, utilisez, profitez ! Il existe des cours en ligne sur <a href=\"https://lernu.net\">lernu.net</a>, et sur <a href=\"https://www.duolingo.com/\">Duolingo</a>, ou sur <a href=\"https://esperanto12.net/\">Esperanto en 12 leçons</a>. Ou encore mieux, inscrivez-vous à un cours dispensé par <a href=\"https://londonaesperantokluba.com/OnlineEsperantoCourses.html\">The London Esperanto Club</a>."
   },
-  "pl": {
-    "title": "Esperanto w 17 minut"
-  },
+  // "pl": {
+  //   "title": "Esperanto w 17 minut"
+  // },
   "pt": {
     "title": "Esperanto em 17 minutos",
-    "01": "(Esse não é um curso de Esperanto, mas irá te dar uma ideia sobre a língua, e você provavelmente poderá aprender a maioria daquilo que é necessário, e também através de um pouco de leitura.)",
-    "02": "Esperanto consiste em um conjunto de palavras-raizes, e um sistema para organizá-las, para que se possa usá-las para se criar algo maior. Comecemos!.",
+    "01": "Ok, não é possível aprender nenhuma língua em 17 minutos. Mas com o Esperanto você pode ter uma ideia de tudo muito rápido, e como o Esperanto é tão consistente, você só precisa aprender as coisas uma vez.",
+    "02": "O esperanto é uma língua neutra e internacional, criada para todos. Mas também, o esperanto é um conjunto de raízes de palavras, e um sistema para organizá-las de modo que possam ser usadas para criar algo maior - se você entender esse sistema, poderá dizer qualquer coisa. Vamos começar.",
     "03": "Olhe através da janela. Talvez esteja chovendo. A raíz para isso é <em>pluv-</em>.",
     "04": "A chuva é uma razão para conversar, para dizer que chove. Tome a raíz \"pluv-\", e a transforme em verbo, por adição ao final que significa \"okazas nun\": <em>-as</em>.",
     "e01": "Chove.",
@@ -236,7 +327,7 @@ const translations = {
     "vi": "a quem o sujeito fala",
     "gxi": "outro",
     "li": "outra pessoa (masculina)",
-    "ŝi": "outra pessoa (feminina)",
+    "sxi": "outra pessoa (feminina)",
     "ili": "muito de algo ou muitas pessoas",
     "oni": "simplesmente alguém",
     "17": "\"Mas\", você pode perguntar, \"e sobre a neutralidade de gênero?\". Bem, voltarei a este tema posteriormente.",
@@ -285,11 +376,11 @@ const translations = {
     "tabelal": "kialo",
     "tabelom": "kvanto/kiomo",
     "33": "De alguma forma esqueci palavras básicas, então olharemos algumas sentenças:",
-    "e27": "vi, kaj mi, kaj la kato, estas ĉi tie, sed la hundo mankas.",
-    "e28": "nun, la kato bojas kiel hundo. aŭ eble tio estas la hundo.",
-    "e29": "la lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
+    "e27": "Você, eu e o gato estamos aqui, mas o cachorro está desaparecido.",
+    "e28": "Agora, o gato late como um cachorro. ou talvez seja o cachorro.",
+    "e29": "A língua é fácil de aprender, vale a pena aprender e logo será aprendida.",
     "34": "Sim. Esse é o suficiente.",
-    "end": "E agora, o quê aprender? Aprenda, use, desfrute! Há cursos online em <a href=\"https://lernu.net\">lernu.net</a>, e em <a href=\"https://www.duolingo.com/\">Duolingo</a>, ou em <a href=\"https://learn.esperanto.com/\">Esperanto en 12 lecionoj</a>. Ou ainda melhor, se inscreva ao curso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
+    "end": "E agora, o quê aprender? Aprenda, use, desfrute! Há cursos online em <a href=\"https://lernu.net\">lernu.net</a>, e em <a href=\"https://www.duolingo.com/\">Duolingo</a>, ou em <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Ou ainda melhor, se inscreva ao curso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
   },
   "ru": {
     "title": "Эсперанто за 17 минут",
@@ -383,11 +474,11 @@ const translations = {
     "e28": "Кот сейчас лает, как собака. Или, может быть, это и есть собака.",
     "e29": "Язык легко изучаем (lern- учить, ebl- быть возможным) и достоин изучаения (-ind - быть достойным) и скоро будет выучен.",
     "34": "Да. Этого достаточно. ",
-    "end": "А что дальше? Изучайте, используйте, получайте удовольствие! Существуют курсы Эсперанто в сети Интернет на <a href=\"https://lernu.net\">lernu.net</a>, в <a href=\"https://www.duolingo.com/\">Дуолинго</a>, или <a href=\"https://learn.esperanto.com/\">Эсперанто за 12 уроков</a>. А еще лучше, записывайтесь на курсы <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">Лондонского клуба Эсперанто</a>.",
+    "end": "А что дальше? Изучайте, используйте, получайте удовольствие! Существуют курсы Эсперанто в сети Интернет на <a href=\"https://lernu.net\">lernu.net</a>, в <a href=\"https://www.duolingo.com/\">Дуолинго</a>, или <a href=\"https://esperanto12.net/\">Эсперанто за 12 уроков</a>. А еще лучше, записывайтесь на курсы <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">Лондонского клуба Эсперанто</a>.",
   },
-  "se": {
-    "title": "Esperanto på 17 minuter"
-  }
+  // "se": {
+  //   "title": "Esperanto på 17 minuter"
+  // }
 }
 
 let localTranslations = {}
@@ -518,14 +609,18 @@ function setupMainPage() {
       e.style.opacity = 0
     }
 
-    document.addEventListener('scroll', e => {
+    let onscroll= e => {
       let d = document.documentElement.scrollTop + document.documentElement.clientHeight - 50
       for (let e of document.querySelectorAll('.part')) {
         if (d > e.offsetTop) {
           e.style.opacity = 1
         }
       }
-    })
+    }
+
+    onscroll()
+
+    document.addEventListener('scroll', onscroll)
   }
 
   setupFlow()
