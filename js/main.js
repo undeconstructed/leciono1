@@ -510,17 +510,60 @@ function flag(code) {
 
 function setupLanguageChooser() {
   let chooser = document.querySelector('.languagechooser')
-  let select = chooser.querySelector('select')
+  let list = chooser.querySelector('.list')
+
+  let set = code => {
+    chooser.setAttribute('code', code)
+
+    document.dispatchEvent(new CustomEvent('language-change', { detail: code }))
+  }
+
+  let isOpen = false
+
+  let close = (selected) => {
+    isOpen = false
+    chooser.classList.remove('open')
+    document.removeEventListener('click', close)
+    if (selected) {
+      selected.scrollIntoView({ block: 'center' })
+    }
+  }
+
+  let click = e => {
+    if (!isOpen) {
+      isOpen = true
+      chooser.classList.add('open')
+      document.addEventListener('click', clickOut)
+    } else {
+      let t = e.target
+      let l = t.getAttribute('code')
+      if (l) {
+        close(t)
+        set(l)
+      }
+    }
+  }
+
+  let clickOut = e => {
+    if (!chooser.contains(e.target)) {
+      close()
+    }
+  }
 
   let addLanguage = code => {
-    let opt = document.createElement('option')
-    opt.value = code
-    opt.append(flag(code))
-    select.append(opt)
+    let opt = document.createElement('div')
+    opt.setAttribute("code", code)
+
+    if (code == 'eo') {
+      opt.classList.add('eoflag')
+    } else {
+      opt.append(flag(code))
+    }
+
+    list.append(opt)
   }
 
   let setup = () => {
-    select.replaceChildren()
     let langs = [...new Set([...Object.keys(translations), ...Object.keys(localTranslations)])].sort()
     for (let lang of langs) {
       addLanguage(lang)
@@ -528,24 +571,18 @@ function setupLanguageChooser() {
   }
   setup()
 
-  let dispatch = () => {
-    let lang = select.value
-    document.dispatchEvent(new CustomEvent('language-change', { detail: lang }))
-  }
-
-  select.addEventListener('change', dispatch)
-
   let firstLang = navigator.language.split('-')[0]
   if (translations[firstLang]) {
-    select.value = firstLang
+    set(firstLang)
   } else {
-    select.value = 'en'
+    set('en')
   }
-  dispatch()
+
+  chooser.addEventListener('click', click)
 
   document.addEventListener('new-language', e => {
     setup()
-    select.value = e.detail
+    set(e.detail)
     dispatch()
   })
 }
