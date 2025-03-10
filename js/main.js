@@ -485,10 +485,9 @@ let localTranslations = {}
 
 function flag(code) {
   if (code === 'eo') {
-    // let f = document.createElement('div')
-    // f.classList.add('eoflag')
-    return 'Eo'
+    return 'eo'
   }
+
   if (code === 'en') {
     code = 'gb'
   } else if (code === 'pt') {
@@ -512,21 +511,30 @@ function setupLanguageChooser() {
   let chooser = document.querySelector('.languagechooser')
   let list = chooser.querySelector('.list')
 
-  let set = code => {
-    chooser.setAttribute('code', code)
+  let selected = ''
 
+  let select = () => {
+    for (let i of list.querySelectorAll(":scope > div")) {
+      if (i.getAttribute('code') == selected) {
+        i.scrollIntoView({ block: 'center' })
+        break
+      }
+    }
+  }
+
+  let set = code => {
+    selected = code
     document.dispatchEvent(new CustomEvent('language-change', { detail: code }))
+    select()
   }
 
   let isOpen = false
 
-  let close = (selected) => {
+  let close = () => {
     isOpen = false
     chooser.classList.remove('open')
     document.removeEventListener('click', close)
-    if (selected) {
-      selected.scrollIntoView({ block: 'center' })
-    }
+    select()
   }
 
   let click = e => {
@@ -535,11 +543,10 @@ function setupLanguageChooser() {
       chooser.classList.add('open')
       document.addEventListener('click', clickOut)
     } else {
-      let t = e.target
-      let l = t.getAttribute('code')
+      let l = e.target.getAttribute('code')
       if (l) {
-        close(t)
         set(l)
+        close()
       }
     }
   }
@@ -564,6 +571,8 @@ function setupLanguageChooser() {
   }
 
   let setup = () => {
+    list.replaceChildren()
+
     let langs = [...new Set([...Object.keys(translations), ...Object.keys(localTranslations)])].sort()
     for (let lang of langs) {
       addLanguage(lang)
@@ -583,7 +592,6 @@ function setupLanguageChooser() {
   document.addEventListener('new-language', e => {
     setup()
     set(e.detail)
-    dispatch()
   })
 }
 
