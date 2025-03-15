@@ -73,6 +73,9 @@ h1 {
   padding: 1.5rem;
   transition: opacity 1s;
 }
+.part.hidden {
+  opacity: 0;
+}
 
 .p {
   max-width: 50rem;

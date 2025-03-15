@@ -632,17 +632,9 @@ function setupMainPage() {
     e.append('🔉\ufe0e')
   }
 
-  let setupAudio = () => {
-    for (let e of document.querySelectorAll('.listen')) {
-      setupAudioElement(e)
-    }
-  }
-
   document.addEventListener('language-change', e => {
     translate(e.detail)
   })
-
-  setupAudio()
 
   let setupFlow = () => {
     let page = document.querySelector('.lessonpage')
@@ -651,14 +643,17 @@ function setupMainPage() {
     nextBox.replaceChildren()
 
     for (let e of document.querySelectorAll('.part')) {
-      e.style.opacity = 0
+      e.classList.add('hidden')
     }
 
     let onscroll= e => {
       let d = document.documentElement.scrollTop + document.documentElement.clientHeight - 50
-      for (let e of document.querySelectorAll('.part')) {
+      for (let e of document.querySelectorAll('.part.hidden')) {
         if (d > e.offsetTop) {
-          e.style.opacity = 1
+          e.classList.remove('hidden')
+          for (let a of e.querySelectorAll('.listen')) {
+            setupAudioElement(a)
+          }
         }
       }
     }
