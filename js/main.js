@@ -638,9 +638,6 @@ function setupMainPage() {
 
   let setupFlow = () => {
     let page = document.querySelector('.lessonpage')
-    let nextBox = page.querySelector('.next')
-
-    nextBox.replaceChildren()
 
     for (let e of document.querySelectorAll('.part')) {
       e.classList.add('hidden')
