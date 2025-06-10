@@ -13,3 +13,15 @@ Estas butono en la traduka paĝo por aldoni lingvon.
 
 Aŭ vi povas rekte ŝanĝi tradukojn en [ĉi tiu dosiero](js/main.js), se vi
 komprenas JSON'on.
+
+## Rajtoj
+
+Funkciaj kaj videblaj ecoj de la retejo estas donata sub AGPL. Same la esperanta teksto.
+
+Krom kie menciite, tradukoj estas posedaĵoj de siaj aŭtoroj, donataj al ĉi tiu projeckto por uzo en ĉi tiu retejo.
+
+## Rights
+
+Functional and visible aspects of the website are provided under AGPL. Also the esperanto text.
+
+Apart from where mentioned, translations are property of their authors, provided to this project for use in this website.
