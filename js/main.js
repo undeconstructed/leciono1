@@ -95,7 +95,7 @@ const translations = {
     "e28": "Nun, la kato bojas kiel hundo. Aŭ eble tio estas la hundo.",
     "e29": "La lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
     "34": "Jes. Tio sufiĉos.",
-    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
+    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://kursaro.net\">La Londona Esperanto-Klubo</a>."
   },
   "es": {
     "title": "Esperanto en 17 minutos",
@@ -189,7 +189,7 @@ const translations = {
     "e28": "Ahora, el gato ladra como un perro. O quizá eso es un perro.",
     "e29": "El idioma se aprende fácilmente y merece la pena ser aprendido y pronto estará aprendido.",
     "34": "Sí, es suficiente.",
-    "end": "¿Y ahora qué? Aprende, usa, disfruta. Hay cursos en Internet en <a href=\"https://lernu.net\">lernu.net</a>, y en <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 tagoj</a>. O, incluso mejor, únete a un kurso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">El Club Esperantista de Londres</a>.",
+    "end": "¿Y ahora qué? Aprende, usa, disfruta. Hay cursos en Internet en <a href=\"https://lernu.net\">lernu.net</a>, y en <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 tagoj</a>. O, incluso mejor, únete a un kurso de <a href=\"https://kursaro.net\">El Club Esperantista de Londres</a>.",
   },
   "fr": {
     "title": "L'espéranto en 17 minutes",
@@ -380,7 +380,7 @@ const translations = {
     "e28": "Agora, o gato late como um cachorro. ou talvez seja o cachorro.",
     "e29": "A língua é fácil de aprender, vale a pena aprender e logo será aprendida.",
     "34": "Sim. Esse é o suficiente.",
-    "end": "E agora, o quê aprender? Aprenda, use, desfrute! Há cursos online em <a href=\"https://lernu.net\">lernu.net</a>, e em <a href=\"https://www.duolingo.com/\">Duolingo</a>, ou em <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Ou ainda melhor, se inscreva ao curso de <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">La Londona Esperanto-Klubo</a>."
+    "end": "E agora, o quê aprender? Aprenda, use, desfrute! Há cursos online em <a href=\"https://lernu.net\">lernu.net</a>, e em <a href=\"https://www.duolingo.com/\">Duolingo</a>, ou em <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Ou ainda melhor, se inscreva ao curso de <a href=\"https://kursaro.net\">La Londona Esperanto-Klubo</a>."
   },
   "ru": {
     "title": "Эсперанто за 17 минут",
@@ -474,7 +474,7 @@ const translations = {
     "e28": "Кот сейчас лает, как собака. Или, может быть, это и есть собака.",
     "e29": "Язык легко изучаем (lern- учить, ebl- быть возможным) и достоин изучаения (-ind - быть достойным) и скоро будет выучен.",
     "34": "Да. Этого достаточно. ",
-    "end": "А что дальше? Изучайте, используйте, получайте удовольствие! Существуют курсы Эсперанто в сети Интернет на <a href=\"https://lernu.net\">lernu.net</a>, в <a href=\"https://www.duolingo.com/\">Дуолинго</a>, или <a href=\"https://esperanto12.net/\">Эсперанто за 12 уроков</a>. А еще лучше, записывайтесь на курсы <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\">Лондонского клуба Эсперанто</a>.",
+    "end": "А что дальше? Изучайте, используйте, получайте удовольствие! Существуют курсы Эсперанто в сети Интернет на <a href=\"https://lernu.net\">lernu.net</a>, в <a href=\"https://www.duolingo.com/\">Дуолинго</a>, или <a href=\"https://esperanto12.net/\">Эсперанто за 12 уроков</a>. А еще лучше, записывайтесь на курсы <a href=\"https://kursaro.net\">Лондонского клуба Эсперанто</a>.",
   },
   "th": {
     "title": "ภาษาเอสเปรันโตใน 17 นาที",
@@ -568,7 +568,7 @@ const translations = {
     "e28": "ตอนนี้ แมวเห่าเหมือนสุนัข หรือบางที นั่นอาจเป็นสุนัขจริง ๆ ก็ได้",
     "e29": "ภาษานี้เรียนรู้ได้ง่าย ควรค่าแก่การเรียนรู้ และในไม่ช้ามันก็จะถูกเรียนรู้",
     "34": "ใช่ น่าจะเพียงพอแล้ว",
-    "end": "แล้วตอนนี้เป็นอย่างไรบ้าง? เรียนรู้, นำไปใช้, และสนุกไปด้วยกัน! มีคอร์สออนไลน์ที่ <a href=\"https://lernu.net\">lernu.net</a>, หรือ <a href=\"https://www.duolingo.com/\">Duolingo</a>, หรือ <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. หรือจะดียิ่งกว่านั้น สมัครเรียนกับ <a href=\"https://londonaesperantoklubo.com/OnlineEsperantoCourses.html\"> ชมรมภาษาเอสเปรันโตลอนดอน (Londona Esperanto-Klubo)</a>."
+    "end": "แล้วตอนนี้เป็นอย่างไรบ้าง? เรียนรู้, นำไปใช้, และสนุกไปด้วยกัน! มีคอร์สออนไลน์ที่ <a href=\"https://lernu.net\">lernu.net</a>, หรือ <a href=\"https://www.duolingo.com/\">Duolingo</a>, หรือ <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. หรือจะดียิ่งกว่านั้น สมัครเรียนกับ <a href=\"https://kursaro.net\"> ชมรมภาษาเอสเปรันโตลอนดอน (Londona Esperanto-Klubo)</a>."
   },
   // "se": {
   //   "title": "Esperanto på 17 minuter"
