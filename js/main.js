@@ -95,7 +95,7 @@ const translations = {
     "e28": "Nun, la kato bojas kiel hundo. Aŭ eble tio estas la hundo.",
     "e29": "La lingvo estas facile lernebla, kaj lerninda, kaj baldaŭ estos lernita.",
     "34": "Jes. Tio sufiĉos.",
-    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, kaj ĉe <a href=\"https://www.duolingo.com/\">Duolingo</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://www.kursaro.net\">La Londona Esperanto-Klubo</a>."
+    "end": "Kaj, kio nun? Lernu, uzu, ĝuu! Estas retaj kursoj ĉe <a href=\"https://lernu.net\">lernu.net</a>, aŭ ĉe <a href=\"https://esperanto12.net/\">Esperanto en 12 lecionoj</a>, kaj ankaŭ <a href=\"https://www.duolingo.com/\">Duolingo</a>. Aŭ eĉ pli bone, aliĝu al kurso instruata de <a href=\"https://www.kursaro.net\">La Londona Esperanto-Klubo</a>."
   },
   "es": {
     "title": "Esperanto en 17 minutos",

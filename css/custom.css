@@ -16,7 +16,7 @@ body {
 }
 
 .heading {
-  height: 100vh;
+  height: 100svh;
   padding-top: 20vh;
   display: flex;
   flex-flow: column nowrap;
@@ -65,6 +65,7 @@ h1 {
   padding: 3rem 1rem;
   margin: 1rem 0 5rem 0 !important;
   font-size: 150%;
+  text-align: center;
 }
 
 .end a {
@@ -110,6 +111,7 @@ h1 {
 .p table th {
   padding: .5rem;
   vertical-align: middle;
+  white-space: nowrap;
 }
 .p table td {
   padding: .5rem;
